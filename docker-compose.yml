@@ -34,6 +34,7 @@ services:
    - zabbix-server:zabbix-server
   volumes:
    - /etc/localtime:/etc/localtime:ro
+   - ./zbx_env/etc/ssl/apache2:/etc/ssl/apache2:ro
   environment:
    MYSQL_ROOT_PASSWORD: root_pwd
    MYSQL_DATABASE: zabbix
