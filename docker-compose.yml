@@ -1,7 +1,7 @@
 version: '3.5'
 services:
  zabbix-server:
-  image: zabbix/zabbix-server-mysql:ubuntu-5.2-latest
+  image: zabbix/zabbix-server-mysql:ubuntu-5.4-latest
   volumes:
    - /etc/localtime:/etc/localtime:ro
    - ./zbx_env/var/lib/zabbix/export:/var/lib/zabbix/export:rw
@@ -23,7 +23,7 @@ services:
   restart: unless-stopped
 
  zabbix-web-apache-mysql:
-  image: zabbix/zabbix-web-apache-mysql:ubuntu-5.2-latest
+  image: zabbix/zabbix-web-apache-mysql:ubuntu-5.4-latest
   ports:
    - "80:8080"
    - "443:8443"
@@ -53,7 +53,7 @@ services:
   restart: unless-stopped
 
  zabbix-java-gateway:
-  image: zabbix/zabbix-java-gateway:ubuntu-5.2-latest
+  image: zabbix/zabbix-java-gateway:ubuntu-5.4-latest
   ports:
    - "10052:10052"
   volumes:
